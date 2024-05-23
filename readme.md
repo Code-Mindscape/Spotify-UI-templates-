@@ -1,4 +1,4 @@
-# Spotify-UI-templates-
+# Spotify-UI-templates
 
 1. Side Bar (with animation)
 2. home page
