@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.side-bar {
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+    height: 100vh;
+    width: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(12, 12, 12);
+    transition: 0.6s;
+
+}
+
+.side-bar:hover.active {
+    width: 220px;
+}
+
+.side-bar .nav-icon {
+    height: 20%;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-bar .nav-icon .navbar-icon {
+    width: 30px;
+    transition: 0.3s;
+}
+
+.side-bar:hover.active .nav-icon .navbar-icon.active {
+    display: none;
+}
+
+.side-bar .nav-icon span {
+    font-size: 0.3em;
+    font-weight: 700;
+    color: white;
+    display: none;
+    transition: 0.3s;
+}
+
+.side-bar:hover.active .nav-icon span {
+    display: inline-block;
+    font-size: 1.5em;
+
+}
+
+.side-bar .nav-icon .Spotify-logo {
+    display: none;
+    width: 0;
+    transition: 0.3s;
+}
+
+.side-bar:hover.active .nav-icon .Spotify-logo {
+    display: inline-block;
+    width: 60px;
+}
+
+.side-bar ul {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.side-bar ul li {
+    list-style: none;
+
+}
+
+.side-bar ul li a {
+    text-decoration: none;
+    height: 70px;
+    width: 70px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.9em;
+}
+
+.side-bar:hover.active ul li a {
+    width: 190px;
+}
+
+.side-bar ul li a svg {
+    width: 25px;
+}
+
+.side-bar ul li a:hover {
+    background: rgb(26, 25, 25);
+    color: white;
+
+}
+
+.side-bar ul li a span {
+    font-size: 1em;
+    display: none;
+    transition: 0.3s;
+}
+
+.side-bar:hover.active ul li a span {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+#favourite {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/Homebac.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#favourite .favourite-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#favourite .favourite-content .section1 {
+    width: 50%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#favourite .favourite-content .section1 .sec1-content {
+    z-index: 0;
+    border-radius: 15px;
+    background: rgba(46, 46, 46, 0.3);
+    backdrop-filter: blur(9px);
+    border: 1px solid rgba(46, 46, 46, 0.15);
+    -webkit-backdrop-filter: blur(9px);
+}
+
+#favourite .favourite-content .section1 .scroll-box {
+    width: 450px;
+    min-height: 570px;
+    overflow: auto;
+    padding: 30px 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    background: #1c1c1c9b;
+    border-radius: 10px;
+
+}
+
+#favourite .favourite-content .section1 .scroll-box::-webkit-scrollbar {
+    height: 0;
+}
+
+#favourite .favourite-content .section1 .scroll-box .fav-song-box {
+    width: 350px;
+    margin: 3px 0;
+    height: 70px;
+    background: rgb(44, 247, 102);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 60px;
+}
+
+#favourite .favourite-content .section1 .scroll-box .fav-song-box .image {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #1c1c1c;
+    box-shadow: 0 3px 6px rgba(15, 15, 15, 0.644);
+}
+
+#favourite .favourite-content .section1 .scroll-box .fav-song-box .image img {
+    width: 100%;
+    height: 104%;
+    display: none;
+}
+
+#favourite .favourite-content .section1 .scroll-box .fav-song-box .text {
+    height: 60px;
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+#favourite .favourite-content .section1 .scroll-box .fav-song-box .text h3 {
+    color: #1c1c1c;
+    font-size: 1.2em;
+}
+
+#favourite .favourite-content .section1 .scroll-box .fav-song-box .icon {
+    height: 60px;
+    width: 120px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#favourite .favourite-content .section1 .scroll-box .fav-song-box .icon img:nth-child(1) {
+    cursor: pointer;
+    width: 40%;
+}
+
+#favourite .favourite-content .section1 .scroll-box .fav-song-box .icon img:nth-child(2) {
+    cursor: pointer;
+    width: 20%;
+}
+
+#favourite .favourite-content .section2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(3, 99, 67); */
+}
+
+#favourite .favourite-content .section2 .sec2-content {
+    height: 570px;
+    width: 400px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* opacity: 0; */
+    transition: 0.5s;
+    transform: translateY(0px);
+}
+
+#favourite .favourite-content .section2 .sec2-content.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+#favourite .favourite-content .section2 .sec2-content .play-box {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 50px 10px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.632);
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+    z-index: 0;
+}
+
+#favourite .favourite-content .section2 .sec2-content .play-box::before {
+    height: 100%;
+    width: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    z-index: -1;
+    background: rgba(7, 7, 7, 0.219);
+}
+
+#favourite .favourite-content .section2 .sec2-content .play-box .image-box {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#favourite .favourite-content .section2 .sec2-content .play-box .image-box .img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: rgba(73, 73, 73, 0.699);
+}
+
+#favourite .favourite-content .section2 .sec2-content .play-box .play-box-text {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    color: #1c1c1c;
+}
+
+#favourite .favourite-content .section2 .sec2-content .play-box .play-box-text .Song-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#favourite .favourite-content .section2 .sec2-content .play-box .play-box-text .Song-title h3 {
+    font-size: 1.4em;
+    color: #161515;
+    font-weight: 600;
+}
+
+#favourite .favourite-content .section2 .sec2-content .play-box .play-box-text .Song-title .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background: #1ed760;
+    border-radius: 50%;
+}
+
+#favourite .favourite-content .section2 .sec2-content .play-box .play-box-text .Song-title span {
+    color: #202620;
+    font-weight: 300;
+}
+
+#favourite .favourite-content .section2 .sec2-content .play-box .play-box-text .Song-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#favourite .favourite-content .section2 .sec2-content .play-box .play-box-text .Play-pause-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+#favourite .favourite-content .section2 .sec2-content .play-box .play-box-text .Play-pause-icons .repeat-icon img {
+    width: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#favourite .favourite-content .section2 .sec2-content .play-box .play-box-text .Play-pause-icons .backward-icon img {
+    width: 30px;
+    cursor: pointer;
+}
+
+#favourite .favourite-content .section2 .sec2-content .play-box .play-box-text .Play-pause-icons .play-icon img {
+    width: 70px;
+    cursor: pointer;
+}
+
+#favourite .favourite-content .section2 .sec2-content .play-box .play-box-text .Play-pause-icons .forward-icon img {
+    width: 30px;
+    cursor: pointer;
+}
+
+#favourite .favourite-content .section2 .sec2-content .play-box .play-box-text .Play-pause-icons .playlist-icon img {
+    width: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+}

@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+#home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/Homebac.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#home .home-content {
+    width: 100%;
+    height: 100%;
+}
+#home .home-content .scroll-song-box1 {
+    min-width: 300px;
+    height: 150px;
+    display: flex;
+    overflow: auto;
+    margin: 60px 0px;
+    margin-left: 100px;
+}
+
+#home .home-content .scroll-song-box1::-webkit-scrollbar {
+    width: 0px;
+}
+
+#home .home-content .scroll-song-box1 .song-box {
+    position: relative;
+    min-width: 300px;
+    margin: 0 10px;
+    height: 120px;
+    background: rgb(80, 80, 80);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(17, 17, 17, 0.479);   
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    overflow: hidden;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+#home .home-content .scroll-song-box1 .song-box .image-box{
+    height: 80px;
+    width: 80px;
+    overflow: hidden;
+    background: rgb(131, 131, 131);
+    border-radius: 10px;
+}
+#home .home-content .scroll-song-box1 .song-box .image-box img{
+    width: 106%;
+}
+#home .home-content .scroll-song-box1 .song-box .text-box .play-circle svg{
+    width: 50px;
+    opacity: 0;
+    transition: 0.2s;
+    transition-delay: 0.4s;
+}
+#home .home-content .scroll-song-box1 .song-box:hover .text-box .play-circle svg{
+    opacity: 1;
+}
+#home .home-content .scroll-song-box1 .song-box .text-box .play-circle{
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    position: absolute;
+    top: -30%;
+    right: -12%;
+    background: rgba(131, 131, 131, 0.39);
+    transition: 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home .home-content .scroll-song-box1 .song-box:hover .text-box .play-circle{
+    width: 130px;
+    height: 130px;
+}
+#home .home-content .scroll-song-box1 .song-box .text-box{
+    width: 200px;
+    padding: 10px 10px;
+}
+#home .home-content .scroll-song-box1 .song-box .text-box h3{
+    font-size: 1.2em;
+    color: white;
+}
+#home .home-content .scroll-song-box1 .song-box .text-box p{
+    font-size: 1em;
+    color: white;
+}
+#home .home-content .scroll-song-box2 {
+    min-width: 300px;
+    height: 350px;
+    display: flex;
+    overflow: auto;
+    margin-left: 100px;
+
+}
+
+#home .home-content .scroll-song-box2::-webkit-scrollbar {
+    width: 0px;
+}
+
+#home .home-content .scroll-song-box2 .song-box {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    min-width: 230px;
+    background: #212221;
+    height: 300px;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(17, 17, 17, 0.479);    
+    transition: 0.5s;
+}
+#home .home-content .scroll-song-box2 .song-box .image-box{
+    position: relative;
+    height: 75%;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#home .home-content .scroll-song-box2 .song-box .image-box::before{
+    content: "";
+    background-image: url("../images/play-circle-1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 2;
+}
+#home .home-content .scroll-song-box2 .song-box:hover .image-box::before{
+    opacity: 1;
+}
+#home .home-content .scroll-song-box2 .song-box .image-box img{
+    transition: 0.4s;
+    width: 100%;
+}
+#home .home-content .scroll-song-box2 .song-box:hover .image-box img{
+    transform: scale(1.2);
+}
+#home .home-content .scroll-song-box2 .song-box:hover .image-box{
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.479);    
+    z-index: 7;
+}
+#home .home-content .scroll-song-box2 .song-box .text-box{
+    height: 25%;
+    width: 100%;
+    position: relative;
+    background: #212221;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#home .home-content .scroll-song-box2 .song-box .text-box .text{
+    height: 12%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+}
+#home .home-content .scroll-song-box2 .song-box .text-box .Pause-Play-icons{
+    width: 100%;
+    height: 13%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+#home .home-content .scroll-song-box2 .song-box .text-box .Pause-Play-icons img{
+    transition: 0.3s;
+}
+#home .home-content .scroll-song-box2 .song-box .text-box .Pause-Play-icons img:nth-child(1){
+    width: 35px;
+    padding: 0 5px;
+    transition: 0.6s;
+    transform: translateY(65px);
+    transition-delay: 0.1s;
+}
+#home .home-content .scroll-song-box2 .song-box .text-box .Pause-Play-icons img:nth-child(2){
+    width: 60px;
+    padding: 0 5px;
+    transition: 0.6s;
+    transform: translateY(65px);
+    transition-delay: 0.2s;
+}
+#home .home-content .scroll-song-box2 .song-box .text-box .Pause-Play-icons img:nth-child(3){
+    width: 35px;
+    padding: 0 5px;
+    transition: 0.6s;
+    transform: translateY(65px);
+    transition-delay: 0.3s;
+
+}
+
+#home .home-content .scroll-song-box2 .song-box .image-box:hover ~ .text-box h3{
+    transform: translateY(-70px);
+    opacity: 0;
+}
+#home .home-content .scroll-song-box2 .song-box .image-box:hover ~ .text-box .dot{
+    transform: translateY(-70px);
+    opacity: 0;
+}
+#home .home-content .scroll-song-box2 .song-box .image-box:hover ~ .text-box span{
+    transform: translateY(-70px);
+    opacity: 0;
+}
+#home .home-content .scroll-song-box2 .song-box .image-box:hover ~ .text-box .Pause-Play-icons img{
+    transform: translateY(0px);
+}
+#home .home-content .scroll-song-box2 .song-box .image-box:hover ~ .text-box .Pause-Play-icons {
+    opacity: 1;
+}
+#home .home-content .scroll-song-box2 .song-box .text-box h3{
+    font-size: 1.4em;
+    font-weight: 650;
+    transition: 0.7s;
+}
+#home .home-content .scroll-song-box2 .song-box .text-box .dot{
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background: #1ed760;
+    border-radius: 50%;
+    transition: 0.7s;
+}
+#home .home-content .scroll-song-box2 .song-box .text-box span{
+    font-size: 1.5em;
+    transition: 0.7s;
+}

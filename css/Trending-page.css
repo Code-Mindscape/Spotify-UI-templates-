@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.side-bar {
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+    height: 100vh;
+    width: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(12, 12, 12);
+    transition: 0.6s;
+
+}
+
+.side-bar:hover.active {
+    width: 220px;
+}
+
+.side-bar .nav-icon {
+    height: 20%;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-bar .nav-icon .navbar-icon {
+    width: 30px;
+    transition: 0.3s;
+}
+
+.side-bar:hover.active .nav-icon .navbar-icon.active {
+    display: none;
+}
+
+.side-bar .nav-icon span {
+    font-size: 0.3em;
+    font-weight: 700;
+    color: white;
+    display: none;
+    transition: 0.3s;
+}
+
+.side-bar:hover.active .nav-icon span {
+    display: inline-block;
+    font-size: 1.5em;
+
+}
+
+.side-bar .nav-icon .Spotify-logo {
+    display: none;
+    width: 0;
+    transition: 0.3s;
+}
+
+.side-bar:hover.active .nav-icon .Spotify-logo {
+    display: inline-block;
+    width: 60px;
+}
+
+.side-bar ul {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.side-bar ul li {
+    list-style: none;
+
+}
+
+.side-bar ul li a {
+    text-decoration: none;
+    height: 70px;
+    width: 70px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.9em;
+}
+
+.side-bar:hover.active ul li a {
+    width: 190px;
+}
+
+.side-bar ul li a svg {
+    width: 25px;
+}
+
+.side-bar ul li a:hover {
+    background: rgb(26, 25, 25);
+    color: white;
+
+}
+
+.side-bar ul li a span {
+    font-size: 1em;
+    display: none;
+    transition: 0.3s;
+}
+
+.side-bar:hover.active ul li a span {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+#Trending {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("../images/trendBac.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 120px;
+
+}
+
+#Trending .content1 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Trending .content2 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Trending .content1 .upper-section {
+    min-width: 200px;
+    height: 390px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    padding-left: 200px;
+}
+
+#Trending .content1 .upper-section::-webkit-scrollbar {
+    width: 0px;
+}
+
+#Trending .content1 .upper-section .recomended-box {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    min-width: 310px;
+    height: 220px;
+    background: #8f8f8f;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #000000;
+}
+
+#Trending .content2 .lower-section {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    margin: 0px 0;
+    margin-left: 50px;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+#Trending .content2 .lower-section::-webkit-scrollbar {
+    width: 0px;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content .recomended-box {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    width: 230px;
+    height: 300px;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #000000;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content .recomended-box .image {
+    height: 230px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content .recomended-box .image::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #26262678;
+    opacity: 0;
+    z-index: 0;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content .recomended-box:hover .image::before {
+    opacity: 1;
+    z-index: 1;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content .recomended-box .image img {
+    width: 100%;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content .recomended-box .text {
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #b9b9b9;
+    z-index: 2;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content .recomended-box .text .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content .recomended-box .text .icon svg {
+    width: 0%;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content .recomended-box .text .icon {
+    display: none;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content .recomended-box:hover .text .icon {
+    display: flex;
+    width: 100%;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content .recomended-box:hover .text .icon svg {
+    width: 70%;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content .recomended-box .text h3 {
+    font-size: 1.5em;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content .recomended-box:hover .image {
+    transition: 0.6s;
+    height: 300px;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content .recomended-box:hover .image img {
+    transform: scale(1.32);
+    transition: 0.6s;
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content .recomended-box:hover .text {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background: rgb(4, 247, 130);
+    width: 60px;
+    border-radius: 50%;
+    transition: 0.4s;
+
+}
+
+#Trending .content2 .lower-section .scroll-wrapper .scroll-content .recomended-box:hover .text h3 {
+    display: none;
+}
